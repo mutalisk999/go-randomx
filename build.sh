@@ -2,7 +2,7 @@
 # branches avaliable: master(=random-x) random-xl random-wow random-arq
 echo "Target $*"
 if [ ! -d "RandomX" ]; then
-  git clone https://github.com/maoxs2/RandomX RandomX
+  git clone https://github.com/mutalisk999/RandomX RandomX
 fi
 
 cd RandomX

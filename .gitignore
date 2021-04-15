@@ -5,3 +5,5 @@ librandomx.a
 *.cmake
 Makefile
 gxminer
+.idea
+RandomX
