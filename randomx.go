@@ -1,7 +1,7 @@
 package randomx
 
-//#cgo CFLAGS: -I./randomx
-//#cgo LDFLAGS: -L${SRCDIR}/lib -lrandomx
+//#cgo CFLAGS: -IRandomX/src -Igo-randomx/RandomX/src
+//#cgo LDFLAGS: -Llib -Lgo-randomx/lib -lrandomx
 //#cgo LDFLAGS: -lstdc++
 //#cgo LDFLAGS: -static -static-libgcc -static-libstdc++ -lpthread
 /*
