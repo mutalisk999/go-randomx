@@ -3,7 +3,6 @@ package randomx
 import (
 	"encoding/hex"
 	"fmt"
-	"runtime"
 	"testing"
 )
 
@@ -184,13 +183,12 @@ import (
 //}
 
 func TestCalculateHash(t *testing.T) {
-	cache, _ := AllocCache(FlagDefault)
-	ds, _ := AllocDataset(FlagDefault)
+	cache, _ := AllocCache(FlagJIT)
+	ds, _ := AllocDataset(FlagJIT)
 	seedBytes, _ := hex.DecodeString("e2f3cee2d752d17997b1a000feacc0f21f0edae62cfd189b1568786b28a2a167")
 	InitCache(cache, []byte(seedBytes))
 
-	FastInitFullDataset(ds, cache, uint32(runtime.NumCPU()))
-	vm, _ := CreateVM(cache, ds, FlagDefault)
+	vm, _ := CreateVM(cache, ds, FlagJIT)
 
 	tp := "0e0eceb6d9830694b14d501222f7da7490d0b2d326c3750f08e60f101c285331d67e7ffc0be17c00000000161708ce1b2846cbe8bea4593c1a56cc8e3c1222ed0a7898961cee642d93af042e"
 
